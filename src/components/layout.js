@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import base from './base.css'
-import Container from './container'
-import Navigation from './navigation'
+import Wrapper from './site-wrapper'
+import Nav from './nav'
+import Scroll from './smooth-scroll'
+import Footer from './footer'
 
 class Template extends React.Component {
   render() {
@@ -14,11 +17,20 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line global-require
+      require("smooth-scroll")('a[href*="#"]')
+    }
+
     return (
-      <Container>
-        <Navigation />
+      <Wrapper>
+        <Nav active={location.pathname === `/`? `active`: ''}
+        activeGallery={location.pathname !== `/`? `active`: ''}
+        activeGalleryItem={location.pathname}/>
         {children}
-      </Container>
+        <Scroll path={location.pathname}/>
+        <Footer/>
+      </Wrapper>
     )
   }
 }
