@@ -44,6 +44,7 @@ class RootIndex extends React.Component {
             <title>{siteTitle}| Original Artwork & Photography| Image Gallery</title>
             <meta name="description" content={homeData.metaDescription.metaDescription} />
             <meta name="robots" content="noindex" />
+            <meta name="theme-color" content="#000" />
             <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
             <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=lkggaQwrXr"/>
