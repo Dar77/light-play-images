@@ -53,7 +53,6 @@ class RootIndex extends React.Component {
             <link rel="manifest" href="../../manifest.json?v=lkggaQwrXr"/>
             <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=lkggaQwrXr" color="#5bbad5"/>
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
-            <meta name="theme-color" content="#ffffff"/>
           </Helmet>
           <ParallaxEffect
             backgroundImg={homeData.backgroundImage.file.url}
