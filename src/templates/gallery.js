@@ -60,7 +60,7 @@ class GalleryTemplate extends React.Component {
           <ParallaxEffect
             backgroundImg={gallery.mainHeaderImage.file.url}
             pageTitle={gallery.galleryTitle}
-            galleryHeight='600px'
+            galleryClass="gallery-header-parallax"
           />
           <div className="gallery-header">
             <Container>
@@ -131,7 +131,7 @@ class GalleryTemplate extends React.Component {
           </div>
           <ParallaxEffect
             backgroundImg={gallery.mainFooterImage.file.url}
-            galleryHeight='500px'
+            galleryClass="section-parallax"
           />
         </div>
       </Layout>

@@ -90,10 +90,22 @@ a:link {
 .main-title-section {
   width: 100%;
   margin: 0 auto;
-  padding: 100px 10px 0 10px;
+  padding: 150px 10px 0 10px;
   color: white;
   font-size: 24px;
   text-align: center;
+}
+
+.home-parallax {
+  height: 400px;
+}
+
+.section-parallax {
+  height: 320px;
+}
+
+.gallery-header-parallax {
+  height: 400px;
 }
 
 .parallax-text:after {
@@ -189,32 +201,28 @@ a:link {
 
 /*scroll to top button styles*/
 .top-link {
-  transition: opacity 1s linear;
-  -webkit-transition: opacity 1s linear;
-  -o-transition: opacity 1s linear;
-  opacity: 1;
   display: block;
   z-index: 1000;
   position: fixed;
-  bottom: 70px;
-  right: 30px;
+  bottom: 50px;
+  right: 20px;
   width: 40px;
   height: 40px;
   font-size: 20px;
   line-height: 37px;
   text-align: center;
-  border: 1px solid #f99246;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .top-link i.material-icons {
+  transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+  opacity: 1;
   color: #f99246;
-}
-
-.top-link:hover {
-  transition: background-color .4s linear;
-  background-color: white;
+  border: 1px solid #f99246;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
 }
 
 /*end scroll to top styles*/
@@ -485,7 +493,7 @@ a:link {
 @media screen and (min-width: 400px) {
 
   h1 {
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
 
   h2 {
@@ -502,16 +510,32 @@ a:link {
 
   .main-title-section {
     width: 400px;
-    padding-top: 150px;
+    padding-top: 160px;
   }
 
   .parallax-text:after {
     width: 200px;
     margin-top: 20px;
   }
+
+  .home-parallax {
+    height: 500px;
+  }
+
+  .section-parallax {
+    height: 350px;
+  }
+
+  .gallery-header-parallax {
+    height: 450px;
+  }
 } /* end 400px and larger styles */
 
 @media screen and (min-width: 768px) {
+
+  h1 {
+    font-size: 2em;
+  }
 
   h2 {
     font-size: 1.7em;
@@ -528,6 +552,30 @@ a:link {
   .row {
     margin-left: -15px;
     margin-right: -15px;
+  }
+
+  .home-parallax {
+    height: 1000px;
+  }
+
+  .section-parallax {
+    height: 500px;
+  }
+
+  .gallery-header-parallax {
+    height: 600px;
+  }
+
+  .home-parallax {
+    height: 600px;
+  }
+
+  .section-parallax {
+    height: 400px;
+  }
+
+  .gallery-header-parallax {
+    height: 500px;
   }
 } /* end 768px and larger styles */
 
@@ -574,6 +622,19 @@ a:link {
   .btn-outline-success {
     margin-top: 0px;
   }
+
+  .top-link {
+    bottom: 70px;
+  }
+
+  .top-link i.material-icons {
+    padding: 5px;
+  }
+
+  .top-link i.material-icons:hover {
+    transition: background-color .4s linear;
+    background-color: white;
+  }
 } /* end 970px and larger styles */
 
 @media screen and (min-width: 1200px) {
@@ -600,5 +661,17 @@ a:link {
 
   .footer-logo {
     height: 70px;
+  }
+
+  .home-parallax {
+    height: 1000px;
+  }
+
+  .section-parallax {
+    height: 500px;
+  }
+
+  .gallery-header-parallax {
+    height: 600px;
   }
 } /* end 1200px and larger styles */

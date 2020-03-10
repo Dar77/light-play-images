@@ -58,7 +58,7 @@ class RootIndex extends React.Component {
             backgroundImg={homeData.backgroundImage.file.url}
             pageTitle={homeData.mainTitle}
             galleryDescription={homeData.description.description}
-            galleryHeight='1000px'
+            galleryClass="home-parallax"
           />
           <div className="section-heading-container">
             <h2 className="section-title">Latest Images</h2>
@@ -69,7 +69,7 @@ class RootIndex extends React.Component {
           </Container>
           <ParallaxEffect
             backgroundImg={randomImg()}
-            galleryHeight='500px'
+            galleryClass="section-parallax"
           />
           <div className="section-heading-container">
             <h2 className="section-title">Galleries</h2>
@@ -97,7 +97,7 @@ class RootIndex extends React.Component {
           </Container>
           <ParallaxEffect
             backgroundImg={randomImg()}
-            galleryHeight='500px'
+            galleryClass="section-parallax"
           />
         </React.Fragment>
       </Layout>
