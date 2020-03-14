@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import logo from "./light-play-w-gradient-standard.png" // Tell Webpack this JS file uses this image
+import logo from "./light-play-logo-227.png" // Tell Webpack this JS file uses this image
 
 
 //makes use of StaticQuery so graphql can be used in a component instead of just in pages
