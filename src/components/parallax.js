@@ -13,7 +13,8 @@ export default props => (
     >
       <div className={`main-title-section ${props.galleryClass}`}
         data-sal-duration="1700" data-sal="slide-up" data-sal-delay="200" data-sal-easing="easeInOutCubic">
-        <h1 className="main-heading">{props.pageTitle}</h1>
+        {props.pageTitle === 'Light Play Images' ? <h1 className="main-heading">Welcome to <br/>{props.pageTitle}</h1> :
+        <h1 className="main-heading">{props.pageTitle}</h1>}
         {props.galleryDescription || props.pageTitle !== undefined? <p className="parallax-text">{props.galleryDescription}</p>
         : <p></p>
         }
