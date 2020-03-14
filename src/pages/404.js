@@ -119,6 +119,7 @@ export const pageQuery = graphql`
       edges {
         node {
           galleryTitle
+          slug
           galleryDescription {
             galleryDescription
           }
