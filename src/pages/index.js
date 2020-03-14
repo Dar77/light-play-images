@@ -27,6 +27,7 @@ class RootIndex extends React.Component {
       return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive
     }
 
+    //generate a random image to use as a background
     const randomImg = () => {
       //add the background image files to an array
       let imgArray = images.edges.map(({node}) => node.imageWideBackground.file.url)
@@ -45,7 +46,7 @@ class RootIndex extends React.Component {
             <meta name="description" content={homeData.metaDescription.metaDescription} />
             <meta name="robots" content="noindex" />
             <meta name="theme-color" content="#000" />
-            <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
             <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=lkggaQwrXr"/>
             <link rel="icon" type="image/png" href="../../favicon-32x32.png?v=lkggaQwrXr" sizes="32x32"/>
