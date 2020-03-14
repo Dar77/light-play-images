@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import logo from "./light-play-logo-227.png" // Tell Webpack this JS file uses this image
+import logo from "./light-play-logo-new.png" // Tell Webpack this JS file uses this image
 
 
 //makes use of StaticQuery so graphql can be used in a component instead of just in pages
