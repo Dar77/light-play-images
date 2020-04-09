@@ -32,6 +32,7 @@ class RootIndex extends React.Component {
       //add the background image files to an array
       let imgArray = images.edges.map(({node}) => node.imageWideBackground.file.url)
       //find the length of the array and use this as the max argument in getRandomIntInclusive(min, max)
+      console.log(imgArray, 'imgArray')
       let length = imgArray.length
       //return a random index
       return imgArray[getRandomIntInclusive(0, length-1)]
