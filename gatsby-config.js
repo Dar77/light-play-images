@@ -23,6 +23,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Light Play Images',
+    siteUrl: 'https://www.lightplayimages.com',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -33,6 +34,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-scroll-reveal',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
