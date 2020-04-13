@@ -181,11 +181,14 @@ export const pageQuery = graphql`
       }
     }
     allContentfulGalleryImage(
-      filter: {galleryTitle: {eq: $galleryTitle}}) {
+      filter: {galleryTitle: {eq: $galleryTitle}}
+      sort:{fields:[date], order:DESC}
+    ) {
       edges {
         node {
           imageTitle
           galleryTitle
+          date
           year
           cameraModel
           imageOrientation

@@ -17,12 +17,13 @@ export default () => (
         allContentfulGalleryImage(
           limit: 8
           filter: {imageOrientation: { eq: true }}
-          sort:{fields:[year], order:DESC}
+          sort:{fields:[date], order:DESC}
         ) {
           edges {
             node {
               imageTitle
               galleryTitle
+              date
               imageOrientation
               imageDescription {
                 imageDescription
