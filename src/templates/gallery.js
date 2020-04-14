@@ -47,13 +47,13 @@ class GalleryTemplate extends React.Component {
             <title>{`${gallery.galleryTitle}| Gallery| ${siteTitle}`}</title>
             <meta name="description" content={gallery.metaDescription.metaDescription} />
             <meta name="robots" content="noindex" />
+            <link rel="manifest" crossorigin="use-credentials" href="../../manifest.webmanifest" />
             <meta name="theme-color" content="#000" />
             <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic&display=swap" rel="stylesheet"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"/>
             <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=lkggaQwrXr"/>
             <link rel="icon" type="image/png" href="../../favicon-32x32.png?v=lkggaQwrXr" sizes="32x32"/>
             <link rel="icon" type="image/png" href="../../favicon-16x16.png?v=lkggaQwrXr" sizes="16x16"/>
-            <link rel="manifest" href="../../manifest.json?v=lkggaQwrXr"/>
             <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=lkggaQwrXr" color="#5bbad5"/>
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
