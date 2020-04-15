@@ -56,7 +56,11 @@ class RootIndex extends React.Component {
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
           <ParallaxEffect
-            backgroundImg={homeData.backgroundImage.file.url}
+            backgroundImg={homeData.backgroundImages[1].file.url}
+            backgroundImgs={`${homeData.backgroundImages[0].file.url} 1900w,
+                            ${homeData.backgroundImages[1].file.url} 1450w,
+                            ${homeData.backgroundImages[2].file.url} 840w,
+                            ${homeData.backgroundImages[3].file.url} 650w`}
             pageTitle={homeData.mainTitle}
             galleryDescription={homeData.description.description}
             galleryClass="home-parallax"
@@ -126,6 +130,11 @@ export const pageQuery = graphql`
         metaDescription
       }
       backgroundImage {
+        file {
+          url
+        }
+      }
+      backgroundImages {
         file {
           url
         }

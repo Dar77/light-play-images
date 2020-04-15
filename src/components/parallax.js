@@ -8,6 +8,8 @@ export default props => (
     <Parallax
         blur={0}
         bgImage={props.backgroundImg}
+        bgImageSrcSet={props.backgroundImgs}
+        bgImageSizes="100vw"
         bgImageAlt="parallax background image"
         strength={400}
     >
