@@ -17,7 +17,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const galleries = get(this, 'props.data.allContentfulGallery.edges')
     const images = get(this, 'props.data.allContentfulGalleryImage')
-    const homeData = get(this, 'props.data.contentfulHome')
+    const homeData = get(this, 'props.data.contentfulSiteHome')
 
     //ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
     const getRandomIntInclusive = (min, max) => {
@@ -61,7 +61,7 @@ class RootIndex extends React.Component {
                             ${homeData.backgroundImages[1].file.url} 1450w,
                             ${homeData.backgroundImages[2].file.url} 840w,
                             ${homeData.backgroundImages[3].file.url} 650w`}
-            pageTitle={homeData.mainTitle}
+            pageTitle="Light Play Images"
             galleryDescription={homeData.description.description}
             galleryClass="home-parallax"
           />
@@ -121,18 +121,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    contentfulHome {
-      mainTitle
+    contentfulSiteHome {
       description {
         description
       }
       metaDescription {
         metaDescription
-      }
-      backgroundImage {
-        file {
-          url
-        }
       }
       backgroundImages {
         file {
@@ -150,13 +144,6 @@ export const pageQuery = graphql`
           }
           metaDescription {
             metaDescription
-          }
-          mainHeaderImage {
-            title
-            description
-            file {
-              url
-            }
           }
           previewImage {
             title

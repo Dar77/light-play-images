@@ -58,7 +58,11 @@ class GalleryTemplate extends React.Component {
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
           <ParallaxEffect
-            backgroundImg={gallery.mainHeaderImage.file.url}
+            backgroundImg={gallery.footerImages[1].file.url}
+            backgroundImgs={`${gallery.headerImages[0].file.url} 1900w,
+                            ${gallery.headerImages[1].file.url} 1450w,
+                            ${gallery.headerImages[2].file.url} 840w,
+                            ${gallery.headerImages[3].file.url} 650w`}
             pageTitle={gallery.galleryTitle}
             galleryClass="gallery-header-parallax"
           />
@@ -130,7 +134,11 @@ class GalleryTemplate extends React.Component {
             </Container>
           </div>
           <ParallaxEffect
-            backgroundImg={gallery.mainFooterImage.file.url}
+            backgroundImg={gallery.footerImages[1].file.url}
+            backgroundImgs={`${gallery.footerImages[0].file.url} 1900w,
+                            ${gallery.footerImages[1].file.url} 1450w,
+                            ${gallery.footerImages[2].file.url} 840w,
+                            ${gallery.footerImages[3].file.url} 650w`}
             galleryClass="section-parallax"
           />
         </div>
@@ -159,16 +167,12 @@ export const pageQuery = graphql`
       metaDescription {
         metaDescription
       }
-      mainHeaderImage {
-        title
-        description
+      headerImages {
         file {
-         url
+          url
         }
       }
-      mainFooterImage {
-        title
-        description
+      footerImages {
         file {
           url
         }
