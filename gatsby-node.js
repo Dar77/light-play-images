@@ -33,13 +33,6 @@ exports.createPages = ({ graphql, actions }) => {
                   metaDescription {
                     metaDescription
                   }
-                  mainHeaderImage {
-                    title
-                    description
-                    file {
-                      url
-                    }
-                  }
                   previewImage {
                     title
                     description
