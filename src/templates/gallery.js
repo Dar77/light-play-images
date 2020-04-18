@@ -58,7 +58,7 @@ class GalleryTemplate extends React.Component {
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
           <ParallaxEffect
-            backgroundImg={gallery.footerImages[1].file.url}
+            backgroundImg={gallery.headerImages[1].file.url}
             backgroundImgs={`${gallery.headerImages[0].file.url} 1900w,
                             ${gallery.headerImages[1].file.url} 1450w,
                             ${gallery.headerImages[2].file.url} 840w,

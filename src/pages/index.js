@@ -30,12 +30,20 @@ class RootIndex extends React.Component {
     //generate a random image to use as a background
     const randomImg = () => {
       //add the background image files to an array
-      let imgArray = images.edges.map(({node}) => node.imageWideBackground.file.url)
+      let imgArray = images.edges.map(({node}) => node.wideBackgroundImages)
+      console.log(imgArray, 'imgArray')
+//      let imgArray = images.edges.map(({node}) => node.imageWideBackground.file.url)
       //find the length of the array and use this as the max argument in getRandomIntInclusive(min, max)
       let length = imgArray.length
       //return a random index
       return imgArray[getRandomIntInclusive(0, length-1)]
     }
+
+    const imageOne = randomImg()
+    const imageTwo = randomImg()
+
+
+    console.log(randomImg(), 'randomImg output')
 
 // react bootstrap layout ref: https://react-bootstrap.github.io/layout/grid/
     return (
@@ -73,7 +81,11 @@ class RootIndex extends React.Component {
             <Portrait/>
           </Container>
           <ParallaxEffect
-            backgroundImg={randomImg()}
+            backgroundImg={imageOne[1].file.url}
+            backgroundImgs={`${imageOne[0].file.url} 1900w,
+                            ${imageOne[1].file.url} 1450w,
+                            ${imageOne[2].file.url} 840w,
+                            ${imageOne[3].file.url} 650w`}
             galleryClass="section-parallax"
           />
           <div className="section-heading-container">
@@ -101,7 +113,11 @@ class RootIndex extends React.Component {
             </Row>
           </Container>
           <ParallaxEffect
-            backgroundImg={randomImg()}
+            backgroundImg={imageTwo[1].file.url}
+            backgroundImgs={`${imageTwo[0].file.url} 1900w,
+                            ${imageTwo[1].file.url} 1450w,
+                            ${imageTwo[2].file.url} 840w,
+                            ${imageTwo[3].file.url} 650w`}
             galleryClass="section-parallax"
           />
         </React.Fragment>
@@ -163,8 +179,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          imageWideBackground {
-            title
+          wideBackgroundImages {
             file {
               url
             }

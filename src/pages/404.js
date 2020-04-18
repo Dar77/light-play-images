@@ -29,12 +29,15 @@ class PageNotfoundIndex extends React.Component {
     //generate a random image to use as a background
     const randomImg = () => {
       //add the background image files to an array
-      let imgArray = images.edges.map(({node}) => node.imageWideBackground.file.url)
+      let imgArray = images.edges.map(({node}) => node.wideBackgroundImages)
       //find the length of the array and use this as the max argument in getRandomIntInclusive(min, max)
       let length = imgArray.length
       //return a random index
       return imgArray[getRandomIntInclusive(0, length-1)]
     }
+
+    const imageOne = randomImg()
+    const imageTwo = randomImg()
 
 // react bootstrap layout ref: https://react-bootstrap.github.io/layout/grid/
     return (
@@ -55,8 +58,14 @@ class PageNotfoundIndex extends React.Component {
           </Helmet>
           <Parallax
               blur={0}
-              bgImage={randomImg()}
+              bgImageSrcSet={`${imageOne[0].file.url} 1900w,
+                              ${imageOne[1].file.url} 1450w,
+                              ${imageOne[2].file.url} 840w,
+                              ${imageOne[3].file.url} 650w`}
+              bgImageSizes="100vw"
+              bgImage={imageOne[1].file.url}
               bgImageAlt="parallax background image"
+              galleryClass="home-parallax"
               strength={400}
           >
             <div
@@ -95,7 +104,11 @@ class PageNotfoundIndex extends React.Component {
             </Row>
           </Container>
           <ParallaxEffect
-            backgroundImg={randomImg()}
+            backgroundImg={imageTwo[1].file.url}
+            backgroundImgs={`${imageTwo[0].file.url} 1900w,
+                            ${imageTwo[1].file.url} 1450w,
+                            ${imageTwo[2].file.url} 840w,
+                            ${imageTwo[3].file.url} 650w`}
             galleryClass="section-parallax"
           />
       </Layout>
@@ -122,13 +135,6 @@ export const pageQuery = graphql`
           galleryDescription {
             galleryDescription
           }
-          mainHeaderImage {
-            title
-            description
-            file {
-              url
-            }
-          }
           previewImage {
             title
             description
@@ -147,7 +153,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          imageWideBackground {
+          wideBackgroundImages {
             title
             file {
               url
