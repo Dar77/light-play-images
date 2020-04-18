@@ -52,7 +52,6 @@ class RootIndex extends React.Component {
           <Helmet>
             <title>{siteTitle}| Original Artwork & Photography| Image Gallery</title>
             <meta name="description" content={homeData.metaDescription.metaDescription} />
-            <meta name="robots" content="noindex" />
             <link rel="manifest" crossorigin="use-credentials" href="../../manifest.webmanifest" />
             <meta name="theme-color" content="#000" />
             <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic&display=swap" rel="stylesheet"/>
