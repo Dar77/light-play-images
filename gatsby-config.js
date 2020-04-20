@@ -45,5 +45,11 @@ module.exports = {
         precachePages: ['/', '/gallery/*'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
   ]
 }
