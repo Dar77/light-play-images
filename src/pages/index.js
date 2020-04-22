@@ -31,7 +31,6 @@ class RootIndex extends React.Component {
     const randomImg = () => {
       //add the background image files to an array
       let imgArray = images.edges.map(({node}) => node.wideBackgroundImages)
-      console.log(imgArray, 'imgArray')
 //      let imgArray = images.edges.map(({node}) => node.imageWideBackground.file.url)
       //find the length of the array and use this as the max argument in getRandomIntInclusive(min, max)
       let length = imgArray.length
@@ -41,9 +40,6 @@ class RootIndex extends React.Component {
 
     const imageOne = randomImg()
     const imageTwo = randomImg()
-
-
-    console.log(randomImg(), 'randomImg output')
 
 // react bootstrap layout ref: https://react-bootstrap.github.io/layout/grid/
     return (
