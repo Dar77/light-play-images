@@ -29,6 +29,7 @@ export default props => (
         }
       }
     `}
+
     render={data => (
 
         <Navbar id="header" className="header" expand="lg" fixed="top">
@@ -37,7 +38,7 @@ export default props => (
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link className={`${props.active}`} href="/">Home</Nav.Link>
-              <NavDropdown className={`${props.activeGallery}`} title="Galleries" id="basic-nav-dropdown">
+              <NavDropdown className={props.activeGallery.startsWith('/gallery/') === true? `active`: ''} title="Galleries" id="basic-nav-dropdown">
                 {data.allContentfulGallery.edges.map(({ node }) => {
                   return (
                     <NavDropdown.Item className={props.activeGalleryItem === `/gallery/${node.slug}/`? "active-item" : ""} key={node.galleryTitle} href={`/gallery/${node.slug}/`}>
@@ -56,3 +57,5 @@ export default props => (
     )}
   />
 )
+
+//<NavDropdown className={`${props.activeGallery}`} title="Galleries" id="basic-nav-dropdown">

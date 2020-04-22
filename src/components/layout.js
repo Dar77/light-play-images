@@ -25,7 +25,7 @@ class Template extends React.Component {
     return (
       <Wrapper>
         <Nav active={location.pathname === `/`? `active`: ''}
-        activeGallery={location.pathname !== `/`? `active`: ''}
+        activeGallery={location.pathname}
         activeGalleryItem={location.pathname}/>
         {children}
         <Scroll path={location.pathname}/>
