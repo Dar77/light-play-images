@@ -35,15 +35,25 @@ class SearchByTagTemplate extends React.Component {
     this.setState({ isModalOpen: false })
   }
 
+  constructTitle = (str) => {
+  	//get the url path string back to a tag title
+  	let firstStr = str.replace('/search-by-tag/', '')
+  	firstStr = firstStr.replace(/-/g, ' ')
+  	let result = firstStr.slice(0, -1);
+  	return result
+  }
+
   render() {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const images = get(this.props, 'data.allContentfulGalleryImage')
 
+
     return (
       <Layout location={this.props.location}>
+      {console.log(this.props.location.pathname, 'this.props.location')}
         <div id="main">
           <Helmet>
-            <title>{`Search By Tag| ${siteTitle}`}</title>
+            <title>{`Search By Tag| ${this.constructTitle(this.props.location.pathname)}| ${siteTitle}`}</title>
             <meta name="description" content="search by tag name results" />
             <meta name="robots" content="noindex" />
             <link rel="manifest" crossorigin="use-credentials" href="../../manifest.webmanifest" />
@@ -63,11 +73,11 @@ class SearchByTagTemplate extends React.Component {
             <Container>
               <Row>
                 <Col xs={12} sm={6} md={4} lg={3}>
-                  <h2 className="gallery-g">G</h2>
+                  <h2 className="gallery-g">S</h2>
                 </Col>
                 <Col xs={12} sm={6} md={4} lg={3}>
-                  <h2 className="gallery-header-title">{images.$tag}</h2>
-                  <p className="gallery-header-text">"Results of tag search"</p>
+                  <h2 className="gallery-header-title">{this.constructTitle(this.props.location.pathname)}</h2>
+                  <p className="gallery-header-text">These are the results of your custom search on tag name.</p>
                   <p className="gallery-header-text"><i class="material-icons">photo</i> {images.edges.length}</p>
                 </Col>
               </Row>
