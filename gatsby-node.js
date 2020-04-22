@@ -88,10 +88,11 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         //create search-by-tag pages
+        //'tag' variable is made url friendly: '/' changed to '-' spaces changed to '-' '&' changed to 'and' all made lowercase
         const tags = Object.keys(rawTags)
         tags.forEach((tag, index) => {
           createPage({
-            path: `/search-by-tag/${tag.replace(/\s+/g, '-').toLowerCase().replace(/\&/, 'and')}/`,
+            path: `/search-by-tag/${tag.replace(/\//, '-').replace(/\s+/g, '-').toLowerCase().replace(/\&/, 'and')}/`,
             component: newSearchByTag,
             context: {
               tag: tag
