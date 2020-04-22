@@ -34,7 +34,11 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-scroll-reveal',
     'gatsby-plugin-netlify',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/search-by-tag/*'],
+    },
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
