@@ -13,7 +13,6 @@ import Button from 'react-bootstrap/Button'
 import ParallaxEffect from '../components/parallax'
 import Modal from 'react-modal'
 
-
 class SearchByTagTemplate extends React.Component {
 
   constructor(props) {
@@ -46,11 +45,10 @@ class SearchByTagTemplate extends React.Component {
   render() {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const images = get(this.props, 'data.allContentfulGalleryImage')
-
+    const search = get(this.props, 'data.contentfulSearchByTag')
 
     return (
       <Layout location={this.props.location}>
-      {console.log(this.props.location.pathname, 'this.props.location')}
         <div id="main">
           <Helmet>
             <title>{`Search By Tag| ${this.constructTitle(this.props.location.pathname)}| ${siteTitle}`}</title>
@@ -66,9 +64,15 @@ class SearchByTagTemplate extends React.Component {
             <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=lkggaQwrXr" color="#5bbad5"/>
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
-          <div className="section-heading-container">
-        	<h1 className="main-heading">Search By Tag Results</h1>}
-          </div>
+          <ParallaxEffect
+            backgroundImg={search.BackgroundImages[1].file.url}
+            backgroundImgs={`${search.BackgroundImages[0].file.url} 1900w,
+                            ${search.BackgroundImages[1].file.url} 1450w,
+                            ${search.BackgroundImages[2].file.url} 840w,
+                            ${search.BackgroundImages[3].file.url} 650w`}
+            pageTitle="Search Results"
+            galleryClass="gallery-header-parallax"
+          />
           <div className="gallery-header">
             <Container>
               <Row>
@@ -187,6 +191,13 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    contentfulSearchByTag {
+	  BackgroundImages {
+		file {
+		  url
+		}
       }
     }
   }
