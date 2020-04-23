@@ -38,6 +38,7 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         exclude: ['/search-by-tag/*'],
+      },
     },
     {
       resolve: 'gatsby-source-contentful',

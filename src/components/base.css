@@ -64,6 +64,7 @@ a:link {
 
 .active-item {
   color: #f99246;
+  background-color: #242323;
 }
 
 .margin-btm {
@@ -425,28 +426,6 @@ a:link {
   margin-top: 15px;
 }
 
-.btn-outline-success {
-  margin-top: 15px;
-  color: #f99246;
-  border-color: #f99246;
-}
-
-.btn-outline-success.focus, .btn-outline-success:focus {
-  box-shadow: none;
-}
-
-.btn-outline-success:hover {
-    color: #eee;
-    background-color: #888;
-    border-color: #888;
-}
-
-.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
-    color: #fff;
-    background-color: #888;
-    border-color: #888;
-}
-
 /*below mobile nav toggle button styles*/
 .navbar-light .navbar-toggler {
   color: rgba(0,0,0,.5);
@@ -480,6 +459,39 @@ a:link {
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
   color: #f99246;
   border-bottom: 1px solid #f99246;
+}
+
+/*bootstrap search button styles */
+.btn-outline-success {
+  margin-top: 15px;
+  color: #f99246;
+  border-color: #f99246;
+}
+
+.btn-outline-success.focus, .btn-outline-success:focus {
+  box-shadow: none;
+}
+
+.btn-outline-success:hover {
+  color: #f99246;
+  background-color: #000;
+  border-color: #f99246;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
+  color: #fff;
+  background-color: #000;
+  border-color: #4caf50;
+}
+
+.dropdown-menu.show {
+  max-height: 400px;
+  overflow-x: hidden;
+}
+
+.dropleft .dropdown-menu {
+  top: unset;
+  right: unset;
 }
 /*end bootstrap nav styles */
 
@@ -635,7 +647,12 @@ a:link {
     transition: background-color .4s linear;
     background-color: white;
   }
-} /* end 970px and larger styles */
+
+  .dropleft .dropdown-menu {
+      top: 0;
+      right: 100%;
+  }
+} /* end 992px and larger styles */
 
 @media screen and (min-width: 1200px) {
 
