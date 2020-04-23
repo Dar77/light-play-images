@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import Search from './tag-search-button'
 import logo from "./light-play-logo-new.png" // Tell Webpack this JS file uses this image
 
 
@@ -24,6 +25,13 @@ export default props => (
             node {
               galleryTitle
               slug
+            }
+          }
+        }
+        allContentfulGalleryImage {
+          edges {
+            node {
+              imageTag
             }
           }
         }
@@ -48,14 +56,9 @@ export default props => (
                 })}
               </NavDropdown>
             </Nav>
-            <Form inline>
-              <FormControl type="text" aria-label="Tags" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+            <Search tags={data.allContentfulGalleryImage.edges} active={props.activeGalleryItem}/>
           </Navbar.Collapse>
         </Navbar>
     )}
   />
 )
-
-//<NavDropdown className={`${props.activeGallery}`} title="Galleries" id="basic-nav-dropdown">
