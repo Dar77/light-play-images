@@ -45,6 +45,7 @@ export default props => (
       return (
         <Dropdown.Item
           key={tag}
+          role="menuitem"
           className={props.active === `/search-by-tag/${tag.replace(/\//, '-').replace(/\s+/g, '-').toLowerCase().replace(/\&/, 'and')}/`? "active-item" : ""}
           href={`/search-by-tag/${tag.replace(/\//, '-').replace(/\s+/g, '-').toLowerCase().replace(/\&/, 'and')}/`}
         >
