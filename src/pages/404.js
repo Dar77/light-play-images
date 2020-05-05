@@ -88,15 +88,15 @@ class PageNotfoundIndex extends React.Component {
                 return (
                   <Col key={node.galleryTitle} xs={12} sm={6} md={4} lg={3}>
                     <div className="img-container border-card">
-                      <a href={`/gallery/${node.slug}/`}>
+                      <Link to={`/gallery/${node.slug}/`}>
                         <Img  className="preview-img" alt={node.galleryDescription.galleryDescription}  fluid={node.previewImage.fluid} />
-                      </a>
-                      <a href={`/gallery/${node.slug}/`}>
+                      </Link>
+                      <Link to={`/gallery/${node.slug}/`}>
                         <h3 className="border-card-title">{node.galleryTitle}</h3>
-                      </a>
-                      <a className="border-card-button" href={`/gallery/${node.slug}/`}>
+                      </Link>
+                      <Link className="border-card-button" to={`/gallery/${node.slug}/`}>
                         Gallery
-                      </a>
+                      </Link>
                     </div>
                   </Col>
                 )

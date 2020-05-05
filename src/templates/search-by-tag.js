@@ -49,7 +49,7 @@ class SearchByTagTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div id="main">
+        <main id="main">
           <Helmet>
             <title>{`Search By Tag| ${this.constructTitle(this.props.location.pathname)}| ${siteTitle}`}</title>
             <meta name="description" content="search by tag name results" />
@@ -140,7 +140,7 @@ class SearchByTagTemplate extends React.Component {
                 })}
             </Container>
           </div>
-        </div>
+        </main>
       </Layout>
     )
   }

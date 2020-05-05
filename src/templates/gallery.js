@@ -42,7 +42,7 @@ class GalleryTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div id="main">
+        <main id="main">
           <Helmet>
             <title>{`${gallery.galleryTitle}| Gallery| ${siteTitle}`}</title>
             <meta name="description" content={gallery.metaDescription.metaDescription} />
@@ -140,7 +140,7 @@ class GalleryTemplate extends React.Component {
                             ${gallery.footerImages[3].file.url} 650w`}
             galleryClass="section-parallax"
           />
-        </div>
+        </main>
       </Layout>
     )
   }
