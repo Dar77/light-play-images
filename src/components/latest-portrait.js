@@ -45,9 +45,9 @@ export default () => (
           return (
             <Col key={node.imageTitle} className="margin-btm" xs={12} sm={6} md={4} lg={3}>
                 <div className="img-container">
-                  <a href={`/gallery/${node.galleryTitle.replace(/\s+/g, '-').toLowerCase().replace(/\&/, 'and')}/`}>
+                  <Link to={`/gallery/${node.galleryTitle.replace(/\s+/g, '-').toLowerCase().replace(/\&/, 'and')}/`}>
                     <Img className="preview-img" alt={node.imageDescription.imageDescription} fluid={node.image.fluid}/>
-                  </a>
+                  </Link>
                   <h3 className="img-title">{node.imageTitle}</h3>
                 </div>
             </Col>

@@ -28,7 +28,7 @@ export default () => (
     `}
     render={data => (
 
-      <footer className="footer-wrapper">
+      <footer>
         <Container className="footer-info">
           <Row>
             <Col  xs={12} sm={8} md={12} lg={4}>
@@ -37,7 +37,7 @@ export default () => (
             <Col xs={12} sm={8} md={6} lg={4} className="footer-col">
               <h3>Quick Links</h3>
               <ul className="footer-list">
-                <li><a href="/">Home</a></li>
+                <li><Link to="/">Home</Link></li>
               </ul>
             </Col>
             <Col xs={12} sm={8} md={6} lg={4} className="footer-col">
@@ -46,7 +46,7 @@ export default () => (
                 {data.allContentfulGallery.edges.map(({ node }) => {
                   return (
                     <li  key={node.galleryTitle}>
-                      <a href={`/gallery/${node.slug}/`}>{node.galleryTitle}</a>
+                      <Link to={`/gallery/${node.slug}/`}>{node.galleryTitle}</Link>
                     </li>
                   )
                 })}

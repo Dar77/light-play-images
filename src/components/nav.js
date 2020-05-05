@@ -39,7 +39,7 @@ export default props => (
     `}
 
     render={data => (
-
+      <header>
         <Navbar id="header" className="header" expand="lg" fixed="top">
           <Navbar.Brand href="/"><img className="logo" src={logo} alt="lightplay logo" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -59,6 +59,7 @@ export default props => (
             <Search tags={data.allContentfulGalleryImage.edges} active={props.activeGalleryItem}/>
           </Navbar.Collapse>
         </Navbar>
+      </header>
     )}
   />
 )
