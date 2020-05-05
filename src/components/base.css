@@ -79,7 +79,7 @@ a:link {
 }
 
 .main-heading {
-  color: #fff;
+  color: #f99246;
   font-weight: 600;
   margin: 0 0 30px;
 }
@@ -92,7 +92,7 @@ a:link {
   width: 100%;
   margin: 0 auto;
   padding: 150px 10px 0 10px;
-  color: white;
+  color: #f99246;
   font-size: 24px;
   text-align: center;
 }
@@ -112,7 +112,7 @@ a:link {
 .parallax-text:after {
   content: "";
   display: block;
-  border: 1px solid white;
+  border: 1px solid #f99246;
   width: 100px;
   margin: 0 auto;
 }
@@ -613,6 +613,7 @@ footer {
 
   .parallax-text {
     font-size: 16px;
+    font-weight: bold;
   }
 
   .parallax-text:after {
