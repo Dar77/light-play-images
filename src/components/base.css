@@ -230,7 +230,7 @@ a:link {
 
 /*footer styles below*/
 
-.footer-wrapper {
+footer {
   background: url(../../static/background.jpg) repeat;
   color: #CCC;
   border-top-color: rgba(0,0,0,.2);
