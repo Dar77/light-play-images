@@ -31,7 +31,7 @@ export default () => (
               image {
                 title
                 fluid(maxWidth: 260) {
-                 ...GatsbyContentfulFluid
+                 ...GatsbyContentfulFluid_withWebp
                 }
               }
             }

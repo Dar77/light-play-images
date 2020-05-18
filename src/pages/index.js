@@ -159,7 +159,7 @@ export const pageQuery = graphql`
             title
             description
             fluid(maxWidth: 260) {
-             ...GatsbyContentfulFluid
+             ...GatsbyContentfulFluid_withWebp
             }
           }
         }

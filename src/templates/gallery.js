@@ -176,12 +176,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      previewImage {
-        title
-        fluid(maxWidth: 260) {
-         ...GatsbyContentfulFluid
-        }
-      }
     }
     allContentfulGalleryImage(
       filter: {galleryTitle: {eq: $galleryTitle}}
@@ -211,7 +205,7 @@ export const pageQuery = graphql`
           image {
             title
             fluid(maxWidth: 520) {
-             ...GatsbyContentfulFluid
+             ...GatsbyContentfulFluid_withWebp
             }
           }
         }
