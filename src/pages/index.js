@@ -158,7 +158,7 @@ export const pageQuery = graphql`
           previewImage {
             title
             description
-            fluid(maxWidth: 260) {
+            fluid(maxWidth: 260, quality: 80) {
              ...GatsbyContentfulFluid_withWebp
             }
           }
