@@ -30,8 +30,8 @@ export default () => (
               imageOrientation
               image {
                 title
-                fluid(maxWidth: 260, quality: 80) {
-                 ...GatsbyContentfulFluid_withWebp
+                fluid(maxWidth: 260) {
+                 ...GatsbyContentfulFluid
                 }
               }
             }
