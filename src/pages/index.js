@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import InfoBar from '../components/info-bar'
 import Landscape from '../components/latest-landscape'
 import Portrait from '../components/latest-portrait'
 import ParallaxEffect from '../components/parallax'
@@ -58,16 +59,19 @@ class RootIndex extends React.Component {
             <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=lkggaQwrXr" color="#5bbad5"/>
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
+          <div className="hero-title">
+            <h1 className="hero-heading">Welcome to <br/>Light Play Images</h1>
+            <p className="hero-text">{homeData.description.description}</p>
+          </div>
           <ParallaxEffect
             backgroundImg={homeData.backgroundImages[1].file.url}
             backgroundImgs={`${homeData.backgroundImages[0].file.url} 1900w,
                             ${homeData.backgroundImages[1].file.url} 1450w,
                             ${homeData.backgroundImages[2].file.url} 840w,
                             ${homeData.backgroundImages[3].file.url} 650w`}
-            pageTitle="Light Play Images"
-            galleryDescription={homeData.description.description}
-            galleryClass="home-parallax"
+            galleryClass="gallery-header-parallax"
           />
+          <InfoBar/>
           <div className="section-heading-container">
             <h2 className="section-title">Latest Images</h2>
           </div>
