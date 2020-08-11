@@ -69,7 +69,7 @@ class GalleryTemplate extends React.Component {
             <Container>
               <Row>
                 <Col xs={12} sm={6} md={4} lg={3}>
-                  <h2 className="gallery-g">G</h2>
+                  <p className="gallery-g">G</p>
                 </Col>
                 <Col xs={12} sm={6} md={4} lg={3}>
                   <h2 className="gallery-header-title">{gallery.galleryTitle} gallery</h2>
