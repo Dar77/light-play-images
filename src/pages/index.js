@@ -60,8 +60,10 @@ class RootIndex extends React.Component {
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
           <div className="hero-title">
-            <h1 className="hero-heading">Welcome to <br/>Light Play Images</h1>
-            <p className="hero-text">{homeData.description.description}</p>
+            <div data-sal-duration="1700" data-sal="slide-up" data-sal-delay="200" data-sal-easing="easeInOutCubic">
+              <h1 className="hero-heading">Welcome to <br/>Light Play Images</h1>
+              <p className="hero-text">{homeData.description.description}</p>
+            </div>
           </div>
           <ParallaxEffect
             backgroundImg={homeData.backgroundImages[1].file.url}
