@@ -52,8 +52,8 @@ class SearchByTagTemplate extends React.Component {
         <main id="main">
           <Helmet>
             <title>{`Search By Tag| ${this.constructTitle(this.props.location.pathname)}| ${siteTitle}`}</title>
-            <meta name="description" content="search by tag name results" />
-            <meta name="robots" content="noindex" />
+            <meta name="description" content="search images by tag name results" />
+            <meta name="robots" content="noindex, follow" />
             <link rel="manifest" crossorigin="use-credentials" href="../../manifest.webmanifest" />
             <meta name="theme-color" content="#000" />
             <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic&display=swap" rel="stylesheet"/>
@@ -148,7 +148,7 @@ class SearchByTagTemplate extends React.Component {
 
 export default SearchByTagTemplate
 
-//variables for graphql are declared at the start eg: ($slug: String!, $galleryTitle: String!)
+//variables for graphql are declared at the start eg: ($tag: [String])
 //these have been defined in gatsby-node.js in the create pages function under context.
 //ref: https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs
 export const pageQuery = graphql`
