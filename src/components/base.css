@@ -1,3 +1,4 @@
+
 body {
   font: 14px/1.5em "Lato", sans-serif;
   min-width: 325px;
@@ -66,11 +67,6 @@ a:link {
   height: 46px;
 }
 
-.active-item {
-  color: #f99246;
-  background-color: #242323;
-}
-
 .margin-btm {
   margin-bottom: 60px;
 }
@@ -113,6 +109,7 @@ a:link {
 .main-heading {
   color: #f99246;
   font-weight: 600;
+  text-shadow: 0 0 10px #000;
   margin: 0 0 30px;
 }
 
@@ -233,6 +230,11 @@ a:link {
   filter: opacity(.7);
 }
 
+/*helper styles*/
+.btm-margin {
+  margin-bottom: 28px;
+}
+
 /*scroll to top button styles*/
 .top-link {
   display: block;
@@ -350,6 +352,7 @@ footer {
 .gallery-g {
   font: 10em "Raleway", sans-serif;
   text-align: center;
+  text-shadow: 0 0 12px #888;
   color: #888;
   border-left: 1px dashed #444;
   border-right: 1px dashed #444;
@@ -367,12 +370,6 @@ footer {
 
 .gallery-image-wrapper {
   padding-bottom: 50px;
-}
-
-.gallery-img:hover {
-  border: 1px solid orange;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
 }
 
 .gallery-row {
@@ -427,6 +424,177 @@ footer {
 
 /*end gallery styles*/
 
+/*glitch header text effect (clean css glitch) ref: https://1stwebdesigner.com/trippy-css-distortion-effects/
+  glitch header text effect styles*/
+.error-header{
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #151414;
+  color: #f99246;
+  font-size: 96px;
+  font-family: 'Fira Mono', monospace;
+  letter-spacing: -7px;
+}
+
+.error-text-section {
+  background: #151414;
+  width: 100%;
+  min-height: 150px;
+}
+
+.error-info-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px 80px;
+  color: #f99246;
+  font-size: 24px;
+  text-align: center;
+}
+
+.error-title{
+  animation: glitch 1s linear infinite;
+  text-shadow: 0 0 4px #f99246;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg);
+  }
+}
+
+.error-title:before,
+.error-title:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.error-title:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg);
+  }
+}
+
+.error-title:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg);
+  }
+}
+/*end glitch header text effect styles*/
+
+/*search laser text effect, ref: https://codemyui.com/laser-text-animation-css/
+  search laser effect styles */
+.search-header {
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#1a1a1a, #000);
+}
+
+h1.laser-effect {
+  font: 300 40px/1 "Raleway", sans-serif;
+  text-shadow: 0 0 10px #f99246;
+  padding: 100px 10px 50px;
+  white-space: nowrap;
+  color: rgb(249 146 70 / 19%);
+}
+
+.lasers {
+  display: inline-block;
+  animation: stretch 2.5s cubic-bezier(0.4, 1.4, 0.75, 0.9) infinite;
+  transform-origin: center;
+}
+
+.lasers:nth-of-type(1) {
+  animation-delay: 0.25s;
+}
+
+.lasers:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.lasers:nth-of-type(3) {
+  animation-delay: 0.75s;
+}
+
+.lasers:nth-of-type(4) {
+  animation-delay: 1s;
+}
+
+.lasers:nth-of-type(5) {
+  animation-delay: 1.25s;
+}
+
+.lasers:nth-of-type(6) {
+  animation-delay: 1.5s;
+}
+
+.lasers:nth-of-type(7) {
+  animation-delay: 1.75s;
+}
+
+.lasers:nth-of-type(8) {
+  animation-delay: 2s;
+}
+
+.lasers:nth-of-type(9) {
+  animation-delay: 2.25s;
+}
+
+.lasers:nth-of-type(10) {
+  animation-delay: 2.5s;
+}
+
+@keyframes stretch {
+  5% {
+    transform: scaleX(5000);
+    opacity: .1;
+  }
+
+  15% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+/*end search laser effect styles*/
+
 /*bootstrap nav styles below*/
 .navbar-brand {
   width: 200px;
@@ -437,6 +605,10 @@ footer {
 
 .navbar {
   border-bottom: 1px solid #444;
+}
+
+.navbar-toggler-icon:focus {
+  outline: none;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -460,6 +632,20 @@ footer {
   margin-top: 15px;
 }
 
+.dropdown-menu {
+  background-color: #242323;
+  border: none;
+}
+
+.mr-auto, .mx-auto {
+  width: 87px;
+  margin: 30px 0;
+}
+
+.btn {
+  font-size: 0.8rem;
+}
+
 /*below mobile nav toggle button styles*/
 .navbar-light .navbar-toggler {
   color: rgba(0,0,0,.5);
@@ -477,12 +663,19 @@ footer {
 }
 
 .dropdown-item {
+  color: #eee;
   text-transform: uppercase;
   font-size: 14px;
 }
+
 .dropdown-item:focus, .dropdown-item:hover {
   color: #f99246;
   transition: all .2s ease-in-out;
+  background-color: transparent;
+}
+
+.active-item {
+  color: #f99246;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
@@ -515,7 +708,11 @@ footer {
 .btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
   color: #fff;
   background-color: #000;
-  border-color: #4caf50;
+  border-color: #f99246;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active:focus, .btn-outline-success:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-success.dropdown-toggle:focus {
+  box-shadow: none;
 }
 
 .dropdown-menu.show {
@@ -557,6 +754,10 @@ footer {
   .main-title-section {
     width: 400px;
     padding-top: 160px;
+  }
+
+  .error-info-section {
+    width: 400px;
   }
 
   .parallax-text:after {
@@ -656,6 +857,22 @@ footer {
     font: 1.2em "Lato", sans-serif;
   }
 
+  .btn {
+    font-size: 1rem;
+  }
+
+  .btn-outline-success:not(:disabled):not(.disabled).active:focus, .btn-outline-success:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(249 146 70 / 28%);
+  }
+
+  .dropdown-item:focus, .dropdown-item:hover {
+    text-shadow: 0 0 7px #f6f1ed;
+  }
+
+  .mr-auto, .mx-auto {
+    margin: 0;
+  }
+
   .main-heading {
     font-weight: 700;
     font-size: 64px;
@@ -664,6 +881,10 @@ footer {
   .main-title-section {
     width: 700px;
     padding-top: 250px;
+  }
+
+  .error-info-section {
+    width: 700px;
   }
 
   .parallax-text {
@@ -678,6 +899,12 @@ footer {
 
   .copyright-text {
     font-size: 14px;
+  }
+
+  .gallery-img:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
   }
 
   /*modal image lightbox styles*/
@@ -703,7 +930,8 @@ footer {
 
   .top-link i.material-icons:hover {
     transition: background-color .4s linear;
-    background-color: white;
+    background-color: #000;
+    box-shadow: 0 0 0 0.2rem rgb(249 146 70 / 28%);
   }
 
   .dropleft .dropdown-menu {
