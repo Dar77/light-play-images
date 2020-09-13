@@ -64,15 +64,24 @@ class SearchByTagTemplate extends React.Component {
             <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=lkggaQwrXr" color="#5bbad5"/>
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
-          <ParallaxEffect
-            backgroundImg={search.BackgroundImages[1].file.url}
-            backgroundImgs={`${search.BackgroundImages[0].file.url} 1900w,
-                            ${search.BackgroundImages[1].file.url} 1450w,
-                            ${search.BackgroundImages[2].file.url} 840w,
-                            ${search.BackgroundImages[3].file.url} 650w`}
-            pageTitle="Search Results"
-            galleryClass="gallery-header-parallax"
-          />
+          <div className="search-header">
+          	<h1 className="main-heading laser-effect">
+          		<span className="lasers">S</span>
+          		<span className="lasers">e</span>
+          		<span className="lasers">a</span>
+          		<span className="lasers">r</span>
+          		<span className="lasers">c</span>
+          		<span className="lasers">h</span>
+          		<span className="lasers">&nbsp;</span>
+          		<span className="lasers">R</span>
+          		<span className="lasers">e</span>
+          		<span className="lasers">s</span>
+          		<span className="lasers">u</span>
+          		<span className="lasers">l</span>
+          		<span className="lasers">t</span>
+          		<span className="lasers">s</span>
+          	</h1>
+          </div>
           <div className="gallery-header">
             <Container>
               <Row>
@@ -107,7 +116,7 @@ class SearchByTagTemplate extends React.Component {
                           <p><i class="material-icons">today</i> {node.year}</p>
                           <p><i class="material-icons">photo_camera</i> {node.cameraModel}</p>
                           <p><i class="material-icons">person_outline</i> {node.imageCreator.initials}</p>
-                          <Button onClick={() => this.handleModalOpen(node.imageTitle)} variant="outline-success">Image Lightbox</Button>
+                          <Button onClick={() => this.handleModalOpen(node.imageTitle)} className="btm-margin" variant="outline-success">Image Lightbox</Button>
                           <Modal
                             isOpen={node.imageTitle == this.state.currentImg? this.state.isModalOpen: false}
                             onRequestClose={this.handleModalClose}
