@@ -48,7 +48,7 @@ class PageNotfoundIndex extends React.Component {
             <meta name="robots" content="noindex" />
             <link rel="manifest" crossorigin="use-credentials" href="../../manifest.webmanifest" />
             <meta name="theme-color" content="#000" />
-            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400|Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic&display=swap" rel="stylesheet"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"/>
             <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=lkggaQwrXr"/>
             <link rel="icon" type="image/png" href="../../favicon-32x32.png?v=lkggaQwrXr" sizes="32x32"/>
@@ -56,29 +56,14 @@ class PageNotfoundIndex extends React.Component {
             <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=lkggaQwrXr" color="#5bbad5"/>
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
-          <Parallax
-              blur={0}
-              bgImageSrcSet={`${imageOne[0].file.url} 1900w,
-                              ${imageOne[1].file.url} 1450w,
-                              ${imageOne[2].file.url} 840w,
-                              ${imageOne[3].file.url} 650w`}
-              bgImageSizes="100vw"
-              bgImage={imageOne[1].file.url}
-              bgImageAlt="parallax background image"
-              galleryClass="home-parallax"
-              strength={400}
-          >
-            <div
-              className="main-title-section home-parallax"
-              data-sal-duration="1700"
-              data-sal="slide-up"
-              data-sal-delay="200"
-              data-sal-easing="easeInOutCubic"
-            >
-              <h1 className="main-heading">Sorry Page Not Found - 404</h1>
+          <div className="error-header">
+            <div className="error-title" title="404">404</div>
+          </div>
+          <div className="error-text-section">
+            <div className="error-info-section">
               <p className="parallax-text">We can't find the page you are looking for! It may have been permanently removed from the site. Get back on track with the links on this page.</p>
             </div>
-          </Parallax>
+          </div>
           <div className="section-heading-container">
             <h2 className="section-title">Galleries</h2>
           </div>
