@@ -99,7 +99,7 @@ class GalleryTemplate extends React.Component {
                           <p><i class="material-icons">today</i> {node.year}</p>
                           <p><i class="material-icons">photo_camera</i> {node.cameraModel}</p>
                           <p><i class="material-icons">person_outline</i> {node.imageCreator.initials}</p>
-                          <Button onClick={() => this.handleModalOpen(node.imageTitle)} variant="outline-success">Image Lightbox</Button>
+                          <Button onClick={() => this.handleModalOpen(node.imageTitle)} className="btm-margin" variant="outline-success">Image Lightbox</Button>
                           <Modal
                             isOpen={node.imageTitle == this.state.currentImg? this.state.isModalOpen: false}
                             onRequestClose={this.handleModalClose}
