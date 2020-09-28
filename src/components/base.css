@@ -78,6 +78,36 @@ a:link {
   height: 937px;
 }
 
+.promo-wrapper {
+  padding: 19px 4px 19px 4px;
+  margin: 80px 0 80px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.promotional-info {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: left;
+  height: 100%;
+}
+
+.promotional-heading {
+  padding: 30px 0 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #444;
+  text-align: center;
+}
+
+.promo-text {
+  margin-bottom: 30px;
+}
+
 .hero-title {
   background-color: #000;
   padding: 100px 30px 30px;
@@ -87,6 +117,7 @@ a:link {
   color: #f99246;
   font-size: 28px;
   font-weight: 600;
+  /*text-shadow: -20px -1px 5px #f99246bf;*/
   margin: 0 0 20px;
 }
 
@@ -94,6 +125,8 @@ a:link {
   font-size: 12px;
   color: #f99246;
   text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .info-header-title {
@@ -124,6 +157,31 @@ a:link {
   color: #f99246;
   font-size: 24px;
   text-align: center;
+}
+
+.shop-header-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 150px 10px 100px 10px;
+  color: #f99246;
+  font-size: 24px;
+  background: #151414;
+}
+
+.shop-text {
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #f99246;
+  max-width: 350px;
+  padding-bottom: 20px;
+}
+
+.shop-button {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
 }
 
 .section-parallax {
@@ -228,6 +286,7 @@ a:link {
 
 .preview-img img:hover {
   filter: opacity(.7);
+  cursor: pointer;
 }
 
 /*helper styles*/
@@ -424,7 +483,7 @@ footer {
 
 /*end gallery styles*/
 
-/*glitch header text effect (clean css glitch) ref: https://1stwebdesigner.com/trippy-css-distortion-effects/
+/*glitch header text effect for 404 page(clean css glitch) ref: https://1stwebdesigner.com/trippy-css-distortion-effects/
   glitch header text effect styles*/
 .error-header{
   display: flex;
@@ -770,6 +829,10 @@ h1.laser-effect {
   }
 
   .hero-text {
+    max-width: 450px;
+  }
+
+  .hero-text {
     line-height: 4em;
   }
 
@@ -816,6 +879,17 @@ h1.laser-effect {
 
   .hero-text {
     font-size: 13px;
+  }
+
+  .shop-text {
+    font-size: 14px;
+    max-width: 500px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+
+  .promotional-heading {
+    font-size: 20px;
   }
 
   .info-header-title {
@@ -974,6 +1048,10 @@ h1.laser-effect {
     height: 500px;
   }
 
+  .promotional-heading {
+    font-size: 22px;
+  }
+
   .gallery-header-parallax {
     height: 600px;
   }
@@ -988,6 +1066,10 @@ h1.laser-effect {
 
   .hero-text {
     font-size: 14px;
+  }
+
+  .shop-text {
+    font-size: 15px;
   }
 
   .info-header-title {
@@ -1008,6 +1090,14 @@ h1.laser-effect {
 
   .hero-text {
     font-size: 15px;
+  }
+
+  .promotional-heading {
+    font-size: 24px;
+  }
+
+  .shop-text {
+    font-size: 16px;
   }
 
   .info-header-title {
