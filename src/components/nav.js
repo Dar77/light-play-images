@@ -55,6 +55,7 @@ export default props => (
                   )
                 })}
               </NavDropdown>
+              <Nav.Link className={props.activeGallery === `/shop`? `active`: ''} href="/shop">Shop</Nav.Link>
             </Nav>
             <Search tags={data.allContentfulGalleryImage.edges} active={props.activeGalleryItem}/>
           </Navbar.Collapse>

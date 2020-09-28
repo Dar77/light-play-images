@@ -38,6 +38,7 @@ export default () => (
               <h3>Quick Links</h3>
               <ul className="footer-list">
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/shop">Shop</Link></li>
               </ul>
             </Col>
             <Col xs={12} sm={8} md={6} lg={4} className="footer-col">
