@@ -293,7 +293,3 @@ export const pageQuery = graphql`
     }
   }
 */
-/*redbubble script- not working
-                <script type="text/javascript" src="https://www.redbubble.com/assets/external_portfolio.js"></script>
-                <script id="rb-xzfcxvzx" type="text/javascript">{new RBExternalPortfolio('www.redbubble.com', 'lp-images', 4, 4).renderIframe();}</script>
-*/
