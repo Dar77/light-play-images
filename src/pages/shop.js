@@ -66,14 +66,14 @@ class ShopIndex extends React.Component {
             <Row className="promo-wrapper">
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-print-metal">
                     <Img  className="preview-img" alt={shopData.metalPromoPrint.description}  fluid={shopData.metalPromoPrint.fluid} />
                   </a>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-print-frame">
                     <Img  className="preview-img" alt={shopData.framedPrintsTwo.description}  fluid={shopData.framedPrintsTwo.fluid} />
                   </a>
                 </div>
@@ -89,7 +89,7 @@ class ShopIndex extends React.Component {
               </Col>
               <Col xs={12} sm={12} md={8} lg={8}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-prints">
                     <Img  className="preview-img" alt={shopData.framedPrints.description}  fluid={shopData.framedPrints.fluid} />
                   </a>
                 </div>
@@ -98,14 +98,14 @@ class ShopIndex extends React.Component {
             <Row className="promo-wrapper">
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-print-board-gallery">
                     <Img  className="preview-img" alt={shopData.artBoards.description}  fluid={shopData.artBoards.fluid} />
                   </a>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-print-art">
                     <Img  className="preview-img" alt={shopData.artPrint.description}  fluid={shopData.artPrint.fluid} />
                   </a>
                 </div>
@@ -114,7 +114,7 @@ class ShopIndex extends React.Component {
             <Row>
               <Col xs={12} sm={12} md={8} lg={8}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-stationery">
                     <Img  className="preview-img" alt={shopData.greetingCardPromo.description}  fluid={shopData.greetingCardPromo.fluid} />
                   </a>
                 </div>
@@ -130,14 +130,14 @@ class ShopIndex extends React.Component {
             <Row className="promo-wrapper">
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-notebook-spiral">
                     <Img  className="preview-img" alt={shopData.spiralNotebook.description}  fluid={shopData.spiralNotebook.fluid} />
                   </a>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-notebook-spiral">
                     <Img  className="preview-img" alt={shopData.spiralNotebookTwo.description}  fluid={shopData.spiralNotebookTwo.fluid} />
                   </a>
                 </div>
@@ -153,7 +153,7 @@ class ShopIndex extends React.Component {
               </Col>
               <Col xs={12} sm={12} md={8} lg={8}>
                 <div className="promotional-img">
-                  <a target="_blank" href="https://LP-Images.redbubble.com">
+                  <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-pillows">
                     <Img  className="preview-img" alt={shopData.cushionPromo.description}  fluid={shopData.cushionPromo.fluid} />
                   </a>
                 </div>
