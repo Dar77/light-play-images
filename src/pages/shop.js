@@ -55,8 +55,7 @@ class ShopIndex extends React.Component {
             <link rel="shortcut icon" href="../../favicon.ico?v=lkggaQwrXr"/>
           </Helmet>
           <div className="hero-title">
-            <div className="shop-title-section"data-sal-duration="1700"
-              data-sal="slide-up" data-sal-delay="200" data-sal-easing="easeInOutCubic">
+            <div className="shop-title-section">
                 <h1 className="hero-heading">Light Play Images<br/>Shop</h1>
                 <p className="shop-text">{shopData.openingText.openingText}</p>
                 <Button target="_blank" href="https://LP-Images.redbubble.com" className="btm-margin shop-button" variant="outline-success">Visit Shop</Button>
@@ -79,12 +78,12 @@ class ShopIndex extends React.Component {
                 </div>
               </Col>
             </Row>
-            <Row className="promo-wrapper">
+            <Row className="promo-wrapper" data-sal-duration="1700" data-sal="slide-right" data-sal-delay="200" data-sal-easing="easeInOutCubic">
               <Col xs={12} sm={12} md={4} lg={4}>
                 <div className="promotional-info">
                   <h3 className="promotional-heading">Wall Art</h3>
                   <p className="promo-text">A range of print reproductions are available including, art board, framed, canvas and metal prints.</p>
-                  <Button href="https://LP-Images.redbubble.com" className="btm-margin shop-button" variant="outline-success">Visit Shop</Button>
+                  <Button href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-prints" className="btm-margin shop-button" variant="outline-success">Visit Shop</Button>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={8} lg={8}>
@@ -95,7 +94,7 @@ class ShopIndex extends React.Component {
                 </div>
               </Col>
             </Row>
-            <Row className="promo-wrapper">
+            <Row className="promo-wrapper" data-sal-duration="1700" data-sal="slide-left" data-sal-delay="200" data-sal-easing="easeInOutCubic">
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
                   <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-print-board-gallery">
@@ -111,7 +110,7 @@ class ShopIndex extends React.Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row className="promo-wrapper" data-sal-duration="1700" data-sal="slide-right" data-sal-delay="200" data-sal-easing="easeInOutCubic">
               <Col xs={12} sm={12} md={8} lg={8}>
                 <div className="promotional-img">
                   <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-stationery">
@@ -123,11 +122,11 @@ class ShopIndex extends React.Component {
                 <div className="promotional-info">
                   <h3 className="promotional-heading">Stationery</h3>
                   <p className="promo-text">A range of stationery is available including greeting cards, postcards, notepads etc.</p>
-                  <Button href="https://LP-Images.redbubble.com" className="btm-margin shop-button" variant="outline-success">Visit Shop</Button>
+                  <Button href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-stationery" className="btm-margin shop-button" variant="outline-success">Visit Shop</Button>
                 </div>
               </Col>
             </Row>
-            <Row className="promo-wrapper">
+            <Row className="promo-wrapper" data-sal-duration="1700" data-sal="slide-left" data-sal-delay="200" data-sal-easing="easeInOutCubic">
               <Col xs={12} sm={12} md={6} lg={6}>
                 <div className="promotional-img">
                   <a target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-notebook-spiral">
@@ -143,7 +142,7 @@ class ShopIndex extends React.Component {
                 </div>
               </Col>
             </Row>
-            <Row className="promo-wrapper">
+            <Row className="promo-wrapper" data-sal-duration="1700" data-sal="slide-right" data-sal-delay="200" data-sal-easing="easeInOutCubic">
               <Col xs={12} sm={12} md={4} lg={4}>
                 <div className="promotional-info">
                   <h3 className="promotional-heading">And More!</h3>
