@@ -385,6 +385,10 @@ footer {
 .copyright-text {
   font-size: 12px;
 }
+
+.social-icon-style {
+  padding-right: 3px;
+}
 /*end footer styles*/
 
 /*gallery styles below*/
