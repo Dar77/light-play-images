@@ -40,6 +40,19 @@ export default () => (
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/shop">Shop</Link></li>
               </ul>
+              <h3>Redbubble Shop</h3>
+              <ul className="footer-list">
+                <li><a  target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=LP-Images&asc=u&iaCode=u-prints">Wall Art</a></li>
+                <li><a  target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-clothing">Clothing</a></li>
+                <li><a  target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-accessories">Accessories</a></li>
+                <li><a  target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-phone-cases">Phone Cases</a></li>
+                <li><a  target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-stationery">Stationery</a></li>
+                <li><a  target="_blank" href="https://www.redbubble.com/people/lp-images/shop?artistUserName=lp-images&asc=u&iaCode=u-decor">Home & Living</a></li>
+              </ul>
+              <h3>Social Media</h3>
+              <ul className="footer-list">
+                <li><a  target="_blank" href="https://www.pinterest.com.au/lightplayimages/_saved/"><img className="social-icon-style" src="../../badgeRGB-white-20.png" alt="pinterest icon"/> Pinterest</a></li>
+              </ul>
             </Col>
             <Col xs={12} sm={8} md={6} lg={4} className="footer-col">
               <h3>Galleries</h3>
