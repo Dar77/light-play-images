@@ -28,7 +28,7 @@
     "react-helmet": "^5.2.0",
     "react-modal": "^3.11.1",
     "react-parallax": "^3.0.3",
-    "sharp": "^0.21.0",
+    "sharp": "^0.30.5",
     "smooth-scroll": "^16.1.2"
   },
   "devDependencies": {
